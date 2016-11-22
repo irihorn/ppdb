@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link href="styles/style.css" rel="stylesheet">
+	<title>Добавление нового пациента</title>
+	
+</head>
+
+<body>
+<div class='wrapper'>
+	<header class='header'>
+	</header>
+	<main class='content'>
+		<div id='input_form'>
+			<form action="scripts/form.php" method="post" name="forma">
+			<fieldset>
+			<label for="first_name">Имя:</label><br/>
+			<input type="text" name="first_name" size="30"><br/>
+			<label for="last_name">Фамилия:</label><br/>
+			<input type="text" name="last_name" size="30"><br/>
+			<label for="case_report_num">История болезни:</label><br/>
+			<input type="text" name="case_report_num" size="30"><br/>
+			<label for="age">Возраст:</label><br/>
+			<input name="age" type="text" value="" size="30"><br/>
+			<label for="gender">Пол:</label>
+			<input type="radio" name="gender" value="М">М
+			<input type="radio" name="gender" value="Ж">Ж
+			</fieldset>
+			<br/>
+			<fieldset>
+			<input id="submit" type="submit" value="Отправить данные"><br/>
+			</fieldset>
+
+			</form>
+		</div>
+	</main>
+	<footer class='footer'>
+	Create with Love!
+	</footer>
+</div>
+
+</body>
+</html>

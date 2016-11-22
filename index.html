@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Главное меню</title>
+		<meta name="description" content="Адаптивное retina меню" />
+		<meta name="keywords" content="Меню" />
+		<link rel="shortcut icon" href="/favicon.ico"> 
+		<link rel="stylesheet" type="text/css" href="styles/default.css" />
+		<link rel="stylesheet" type="text/css" href="styles/component.css" />
+		<script src="scripts/js/modernizr.custom.js"></script>
+	</head>
+	<body>
+		<div class="container">
+
+			<header>
+				<h1>Главное меню <span>выберите необходимый компонент</span></h1>	
+			</header>
+			<div class="main clearfix">
+				
+					<nav id="menu" class="nav">					
+						<ul>
+							<li>
+								<a href="#">
+									<span class="icon">
+										<i aria-hidden="true" class="icon-home"></i>
+									</span>
+									<span>Главная</span>
+								</a>
+							</li>
+							<li>
+								<a href="add_new.html">
+									<span class="icon"> 
+										<i aria-hidden="true" class="icon-user-plus"></i>
+									</span>
+									<span>Добавить пациента</span>
+								</a>
+							</li>
+							<li>
+								<a href="list.php">
+									<span class="icon">
+										<i aria-hidden="true" class="icon-list-numbered"></i>
+									</span>
+									<span>Список пациентов</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span class="icon">
+										<i aria-hidden="true" class="icon-table"></i>
+									</span>
+									<span>Отчеты</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span class="icon">
+										<i aria-hidden="true" class="icon-info"></i>
+									</span>
+									<span>О программе</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span class="icon">
+										<i aria-hidden="true" class="icon-contact"></i>
+									</span>
+									<span>Контакты</span>
+								</a>
+							</li>
+						</ul>
+					</nav>
+				
+			</div>
+		</div><!-- /container -->
+		<script>
+			//  Функция для изменения класса
+			var changeClass = function (r,className1,className2) {
+				var regex = new RegExp("(?:^|\\s+)" + className1 + "(?:\\s+|$)");
+				if( regex.test(r.className) ) {
+					r.className = r.className.replace(regex,' '+className2+' ');
+			    }
+			    else{
+					r.className = r.className.replace(new RegExp("(?:^|\\s+)" + className2 + "(?:\\s+|$)"),' '+className1+' ');
+			    }
+			    return r.className;
+			};	
+
+			//  Создание кнопки меню в JS для маленьких экранов
+			var menuElements = document.getElementById('menu');
+			menuElements.insertAdjacentHTML('afterBegin','<button type="button" id="menutoggle" class="navtoogle" aria-hidden="true"><i aria-hidden="true" class="icon-menu"> </i> Меню</button>');
+
+			// Переключение класса по клику - показать/скрыть меню
+			document.getElementById('menutoggle').onclick = function() {
+				changeClass(this, 'navtoogle active', 'navtoogle');
+			}
+		</script>
+
+		<!-- pcvector.net -->
+		<!--<script type="text/javascript" src="http://pcvector.net/templates/pcv/js/pcvector.js"></script> -->
+		<!-- /pcvector.net -->
+	</body>
+</html>

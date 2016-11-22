@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Добавить нового пациента</title>
+<link rel="stylesheet" type="text/css" href="styles/css.css" media="screen" />
+<script type="text/javascript" src='scripts/js/js.js'></script>
+<script type="text/javascript" src='scripts/js/jquery-3.1.1.min.js'></script>
+</head>
+
+<body>
+<div id="main_container">
+	<div id="header">
+    	<div id="logo"><a href="home.html"><img src="images/logo.gif" alt="" title="" border="0" /></a></div>
+    
+        <div id="menu">
+            <ul>                                              
+                <li><a class="current" href="#" title="">home</a></li>
+                <li class="divider"></li>
+                <li><a href="#" title="">webdesign</a></li>
+                <li class="divider"></li>
+                <li><a href="#" title="">identity</a></li>
+                <li class="divider"></li>
+                <li><a href="#" title="">print</a></li>
+                <li class="divider"></li>
+                <li><a href="#" title="">contact</a></li>
+            </ul>
+        </div>
+    
+    </div>
+    
+    
+    <!--<div id="middle_box">
+    </div>-->
+    
+    <div id="main_content">
+    <div id="result"></div>          
+        <div id='input_form'>
+            <form action="" method="post" name="forma" onsubmit="send();">
+            <fieldset>
+            <label for="first_name">Имя:</label><br/>
+            <input id="first_name" type="text" name="first_name" size="30"><br/>
+            <label for="last_name">Фамилия:</label><br/>
+            <input id="last_name" type="text" name="last_name" size="30"><br/>
+            <label for="case_report_num">История болезни:</label><br/>
+            <input id="case_report_num" type="text" name="case_report_num" size="30"><br/>
+            <label for="age">Возраст:</label><br/>
+            <input id="age" name="age" type="text" value="" size="30"><br/>
+            <label for="gender">Пол:</label>
+            <input type="radio" name="gender" value="М">М
+            <input type="radio" name="gender" value="Ж">Ж
+            </fieldset>
+            <br/>
+            <fieldset>
+            <input id="submit" type="submit" value="Отправить данные"><br/>
+            </fieldset>
+
+            </form>
+        </div>
+        <div id='input_form'>
+            <form action="scripts/form.php" method="post" name="forma">
+                <fieldset>
+                <label for="who_sent">Кем направлен:</label><br/>
+                <input type="text" name="who_sent" size="30"><br/>
+                <label for="finance">Источник финасирования:</label><br/>
+                <input type="text" name="finance" size="30"><br/>
+                <label for="koi">Вид исследования:</label><br/>
+                <input type="text" name="koi" size="30"><br/>
+                <label for="invest_num">Исследование №:</label><br/>
+                <input type="text" name="invest_num" size="30"><br/>
+                <label for="date_sent">Дата направления:</label><br/>
+                <input type="date" name="date_sent" size="30"><br/>
+                <label for="department">Отделение:</label><br/>
+                    <select name="department">
+                        <option value="Поликлиника">Поликлиника</option>
+                        <option value="Химиотерапевтическое отделение 1">Химиотерапевтическое отделение 1</option>
+                        <option value="Химиотерапевтическое отделение 2">Химиотерапевтическое отделение 2</option>
+                        <option value="Химиотерапевтическое отделение 3">Химиотерапевтическое отделение 3</option>
+                        <option value="Отделение Энждоскопии">Отделение Энждоскопии</option>
+                        <option value="Отделение ультразвуковой диагностики">Отделение ультразвуковой диагностики</option>
+                        <option value="РКЦОЗМ">РКЦОЗМ</option>
+                        <option value="Операционный блок">Операционный блок</option>
+                    </select>
+                <br/>
+                <label for="invest_obj">Объект исследования:</label><br/>
+                <textarea name="invest_obj" type="text" rows="5" cols="30"></textarea><br/>
+                <label for="clinical_data">Клинические данные:</label><br/>
+                <textarea name="clinical_data" type="text" rows="5" cols="30"></textarea><br/>
+
+                </fieldset>
+            <br/>
+            <fieldset>
+            <input id="submit" type="submit" value="Отправить данные"><br/>
+            </fieldset>
+
+            </form>
+        </div>            
+        <div class="clear"></div>    
+    </div>     
+            
+            
+    <div id="footer">
+     	<div class="copyright">
+        <img src="images/footer_logo.gif" alt="" title="" />
+        </div>
+    	<div class="footer_links">
+        
+        </div>
+    
+    
+    </div>
+
+
+</div>
+</body>
+</html>
